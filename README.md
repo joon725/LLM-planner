@@ -51,6 +51,41 @@ ollama pull llava:13b
 ollama pull llama3.1:405b
 ```
 
+### 4. Download BLIP pretrained weight
+
+BLIP pretrained weight should be downloaded. BLIP is used for visual/text feature extractor. Download link is shown below.
+
+Link : https://github.com/salesforce/BLIP?tab=readme-ov-file
+
+In the link, please find "Pre-trained checkpoints" from the README screen, and click "Download" from "BLIP w/ ViT-B" column, "129M" row.
+The name of the checkpoint file is model_base.pth
+
+### 5. Locate YOLO weights and BLIP weights.
+
+Please create "weights" folder in the source code files.
+Then create two folders named as "BLIP", "YOLO".
+In the two folders, pretrained weights for each mdoel should be contained.
+For BLIP, "model_base.pth" from the step4 should be contained in "weights/BLIP" folder.
+For YOLO, AI2THOR_total.pt, best.pt that were delivered through email, should be contained in "weights/YOLO" folder.
+- AI2THOR_total.pt : pretrained weights for custom AI2THOR image dataset.
+- best.pt : pretrained weights for normal coco dataset.
+
+Detailed directory of the above explanation is below.
+
+
+```
+root                                  
+├── cfg
+├── BLIP
+...
+├── weights
+    ├── BLIP
+        ├── model_base.pth
+    ├── YOLO
+        ├── AI2THOR_total.pt
+        ├── best.pt 
+```
+
 ### 4. Install python & pytorch
 
 Install python3.8 & pytorch version 2.0.1(GPU version).
