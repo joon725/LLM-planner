@@ -225,6 +225,8 @@ if __name__ == "__main__":
     user_input = "모든 요리도구들을 같은 곳에 모아줘."
     
     task_plan = task_plan_generator(scene_graph, user_input)
+
+    print("[DONE]")
     
 
 
