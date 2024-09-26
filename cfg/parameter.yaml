@@ -1,0 +1,13 @@
+# 카메라 파라미터 (intrinsics)
+fx : 525.0  # 카메라 초점 거리 (x축)
+fy : 525.0  # 카메라 초점 거리 (y축)
+cx : 319.5  # 카메라 중심 (x축)
+cy : 239.5  # 카메라 중심 (y축)
+
+# YOLO weight 종류/경로
+yolo_weight : ./weights/YOLO/AI2THOR_total.pt
+
+# Test img 경로
+img_path : ./test_img/BGR_img_FloorPlan3_6.png
+depth_path : ./test_img/FloorPlan3_depth_frame.npy
+
